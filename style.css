@@ -154,6 +154,20 @@ nav {
     margin-right: 20px;
 }
 
+.navbar a, .navbar-menu a {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.navbar a:hover, .navbar-menu a:hover {
+    background-color: #3471b1;
+    border-radius: 5px;
+}
+
 /* Responsivité - Mobile */
 @media (max-width: 768px) {
     .navbar {
@@ -564,4 +578,19 @@ h2::before {
 
 .intro-text:hover::before {
     width: 100px;
+}
+
+/* Style pour la section de titre */
+.intro-section {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.intro-title {
+    font-size: 2em;
+    color: #1e90ff; /* Un bleu vif */
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 255, 0.5); /* Ombre douce pour le texte */
 }
