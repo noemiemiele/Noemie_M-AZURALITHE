@@ -274,58 +274,67 @@ h2 {
     transform: scale(1.05);
 }
 
-/* Section Histoire */
-.story-section {
-    padding: 50px 20px;
+/* Style pour la section "Nos Services" */
+#nosservices {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     background-color: #f9f9f9;
-    color: #333;
-    text-align: center;
+    padding: 60px 5%;
+    gap: 30px;
 }
 
-.story-section h2 {
-    font-size: 2.5rem;
-    color: #5350ff;
-    margin-bottom: 20px;
+/* Conteneur du texte */
+.story-content {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
 }
 
-.story-section p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #666;
-    max-width: 900px;
-    margin: 0 auto 30px;
-}
-
-.story-section h3 {
+.story-content h3 {
     font-size: 2rem;
-    color: #333;
+    color: #2a4d85;
     margin-bottom: 15px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-#storyContent {
-    text-align: left;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
+.story-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
 }
 
-#readMoreBtn {
-    background-color: #509cff;
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 30px;
-    transition: background-color 0.3s;
+/* Image à droite */
+.story-image {
+    flex: 1;
+    max-width: 45%;
 }
 
-#readMoreBtn:hover {
-    background-color: #3c47e7;
+.story-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Responsivité */
+@media (max-width: 1024px) {
+    #nosservices {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .story-content, .story-image {
+        max-width: 100%;
+    }
+
+    .story-content {
+        text-align: center;
+    }
+}
+
 
 /* Footer */
 .footer {
@@ -580,17 +589,57 @@ h2::before {
     width: 100px;
 }
 
-/* Style pour la section de titre */
-.intro-section {
+/* Section Témoignages */
+.testimonials-section {
     text-align: center;
-    margin-top: 20px;
-    padding: 20px;
+    padding: 60px 20px;
+    background-color: #f4f4f4;
 }
 
-.intro-title {
-    font-size: 2em;
-    color: #1e90ff; /* Un bleu vif */
+.testimonials-section h2 {
+    font-size: 2.5em;
+    color: #1e90ff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
     font-weight: bold;
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 255, 0.5); /* Ombre douce pour le texte */
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.testimonial-card h3 {
+    color: #333;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.testimonial-card p {
+    color: #555;
+    font-style: italic;
 }
